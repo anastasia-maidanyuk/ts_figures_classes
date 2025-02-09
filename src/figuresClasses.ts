@@ -1,13 +1,13 @@
 export interface Figure {
   shape: 'triangle' | 'circle' | 'rectangle';
-  color: 'red' | 'grean' | 'blue';
+  color: 'red' | 'green' | 'blue';
   getArea(): number;
 }
 
 export class Triangle implements Figure {
   shape: 'triangle' = 'triangle';
 
-  color: 'red' | 'grean' | 'blue';
+  color: 'red' | 'green' | 'blue';
 
   private a: number;
 
@@ -16,7 +16,7 @@ export class Triangle implements Figure {
   private c: number;
 
   constructor(
-    color: 'red' | 'grean' | 'blue',
+    color: 'red' | 'green' | 'blue',
     a: number,
     b: number,
     c: number,
@@ -47,11 +47,11 @@ export class Triangle implements Figure {
 export class Circle implements Figure {
   shape: 'circle' = 'circle';
 
-  color: 'red' | 'grean' | 'blue';
+  color: 'red' | 'green' | 'blue';
 
   private radius: number;
 
-  constructor(color: 'red' | 'grean' | 'blue', radius: number) {
+  constructor(color: 'red' | 'green' | 'blue', radius: number) {
     if (radius <= 0) {
       throw new Error('Radius must be greater than zero');
     }
@@ -69,13 +69,13 @@ export class Circle implements Figure {
 export class Rectangle implements Figure {
   shape: 'rectangle' = 'rectangle';
 
-  color: 'red' | 'grean' | 'blue';
+  color: 'red' | 'green' | 'blue';
 
   private width: number;
 
   private height: number;
 
-  constructor(color: 'red' | 'grean' | 'blue', width: number, height: number) {
+  constructor(color: 'red' | 'green' | 'blue', width: number, height: number) {
     if (width <= 0 || height <= 0) {
       throw new Error('Width and height must be greater than zero');
     }
